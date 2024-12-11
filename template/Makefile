@@ -14,7 +14,7 @@ all: $(EXE) copy
 run: $(EXE) copy
 	cd $(MINOS_PATH) && ./build bruh -f initrd iso
 
-copy: $(EXE) $(DAY)_input.txt $(DAY)_input_test.txt
+copy: $(EXE) $(INPUTS_PATH)$(DAY)_input.txt $(INPUTS_PATH)$(DAY)_input_test.txt
 	cp $< $(MINOS_PATH)initrd/user/
 	mkdir -p $(MINOS_PATH)initrd/inputs/
 	cp $(INPUTS_PATH)$(DAY)_input.txt      $(MINOS_PATH)initrd/inputs/$(DAY)_input.txt
